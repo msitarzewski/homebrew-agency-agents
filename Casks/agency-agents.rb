@@ -1,18 +1,20 @@
 cask "agency-agents" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.1.0"
-  sha256 arm:   "2e94966a3d5bf3012eacbcc011dd2bb407e88ae4bcbf5d20c17d491b1ccb68b9",
-         intel: "716ea03290f8c69be99aac7e5a4d5ce05ba85755e1b4585510db86f5415b781a"
+  version "0.2.0"
+  sha256 arm:   "340d74e30826cbf84c87b77fa52102aad35c0de49a3bed9ccee4a9c3ddec5ae7",
+         intel: "22dd65b040edaa5221d886bfef5f9dd721294ec0d913dcfa4ddd42141081c569"
 
-  url "https://github.com/msitarzewski/agency-agents-app/releases/download/v#{version}/Agency.Agents_#{version}_#{arch}.dmg",
+  url "https://github.com/msitarzewski/agency-agents-app/releases/download/v#{version}/Agency_Agents_#{version}_#{arch}.dmg",
       verified: "github.com/msitarzewski/agency-agents-app/"
   name "Agency Agents"
   desc "Native installer for AI agents"
   homepage "https://agencyagents.app/"
 
-  # No in-app updater yet (deferred for v0.1.0) — brew manages versions. The
-  # cask version + sha256 bump every release so `brew upgrade --cask` stays current.
+  # The app self-updates via tauri-plugin-updater as of v0.2.0, but brew-installed
+  # copies are managed by brew — so bump version + sha256 every release to keep
+  # `brew upgrade --cask` current. (v0.2.0 asset names use underscores, not the
+  # auto-sanitized dots v0.1.0 shipped with — hence the `Agency_Agents_` url.)
   #
   # `>= :ventura` (macOS 13+, matching minimumSystemVersion) — NOT the bare
   # `:ventura` symbol, which pins to Ventura exactly and would block newer macOS.
