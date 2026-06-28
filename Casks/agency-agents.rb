@@ -1,9 +1,9 @@
 cask "agency-agents" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.2.0"
-  sha256 arm:   "340d74e30826cbf84c87b77fa52102aad35c0de49a3bed9ccee4a9c3ddec5ae7",
-         intel: "22dd65b040edaa5221d886bfef5f9dd721294ec0d913dcfa4ddd42141081c569"
+  version "0.2.1"
+  sha256 arm:   "8e67279beae9bd1d63045ce44a7d99ee9083e93d15031683598c904ebf4ee5df",
+         intel: "0c9730eead95c0b19452a557d5d29f1f1534d86836b85b6094109761f1c8f09d"
 
   url "https://github.com/msitarzewski/agency-agents-app/releases/download/v#{version}/Agency_Agents_#{version}_#{arch}.dmg",
       verified: "github.com/msitarzewski/agency-agents-app/"
