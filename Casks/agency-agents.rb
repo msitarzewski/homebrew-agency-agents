@@ -16,10 +16,11 @@ cask "agency-agents" do
   # `brew upgrade --cask` current. (v0.2.0 asset names use underscores, not the
   # auto-sanitized dots v0.1.0 shipped with — hence the `Agency_Agents_` url.)
   #
-  # `>= :ventura` (macOS 13+, matching minimumSystemVersion) — NOT the bare
-  # `:ventura` symbol, which pins to Ventura exactly and would block newer macOS.
-  # `brew style --fix` rewrites this; do not accept that autocorrect.
-  depends_on macos: ">= :ventura"
+  # macOS 13+ (matches minimumSystemVersion). The bare `:ventura` symbol is a
+  # minimum — "Ventura or newer" — not an exact pin. Homebrew deprecated the old
+  # `">= :ventura"` string-comparison form (it warned on every `brew update`),
+  # so the symbol form is now correct. See msitarzewski/agency-agents#638.
+  depends_on macos: :ventura
 
   app "Agency Agents.app"
 
