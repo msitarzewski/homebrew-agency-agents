@@ -5,8 +5,7 @@ cask "agency-agents" do
   sha256 arm:   "57d80cd98f0a4f112c3b70d15e341dc9b9fa483a3433ba6ed9ff594ecd039d22",
          intel: "0d24eaa45c1c5c1c85f35ab222572c7666fe97705f61f6fe42ae0351183b8986"
 
-  url "https://github.com/msitarzewski/agency-agents-app/releases/download/v#{version}/Agency_Agents_#{version}_#{arch}.dmg",
-      verified: "github.com/msitarzewski/agency-agents-app/"
+  url "https://github.com/msitarzewski/agency-agents-app/releases/download/v#{version}/Agency_Agents_#{version}_#{arch}.dmg"
   name "Agency Agents"
   desc "Native installer for AI agents"
   homepage "https://agencyagents.app/"
